@@ -41,7 +41,7 @@ function App() {
       }}
       />
       <button onClick={() => setEnabled(!enabled)}>
-        {enabled ? 'Desactivar' : 'Activar'} seguir puntero
+        mouse follower {enabled ? 'disable' : 'enable'} 
       </button>
     </>
   )
