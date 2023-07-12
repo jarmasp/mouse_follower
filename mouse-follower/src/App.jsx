@@ -1,17 +1,16 @@
 import { useState, useEffect } from 'react'
 
-function App() {
-
+const MouseFollwer = () => {
   const [enabled, setEnabled] = useState(false)
-  const [position, setPosition] = useState({x:0, y:0})
+  const [position, setPosition] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
     console.log('effect', { enabled })
-    
+
     const handleMove = (event) => {
       const { clientX, clientY } = event
       console.log('handleMove', { clientX, clientY })
-      setPosition({x: clientX, y:clientY})
+      setPosition({ x: clientX, y: clientY })
     }
 
     if (enabled) {
@@ -44,6 +43,14 @@ function App() {
         mouse follower {enabled ? 'disable' : 'enable'} 
       </button>
     </>
+  )
+}
+
+function App() {
+  return (
+    <main>
+      <MouseFollwer/>
+    </main>
   )
 }
 
